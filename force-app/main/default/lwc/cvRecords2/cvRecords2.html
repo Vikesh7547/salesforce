@@ -1,0 +1,32 @@
+<template>
+    <lightning-card title="File Preview v3" icon-name="custom:custom11">
+      <div class="slds‐m‐around_small">
+       <template if:true={filesList}>
+          <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+             <thead>
+                <tr class="slds-text-title_caps">
+                   <th scope="col">
+                      <div title="Key">File Name</div>
+                   </th>
+                   <th scope="col">
+                      <div title="Value">File Extension</div>
+                   </th>
+                </tr>
+             </thead>
+             <tbody>
+                <template for:each={filesList} for:item="keyValue">
+                   <tr key={keyValue.Id}>
+                      <th scope="col">
+                         <div>{keyValue.Title}</div>
+                      </th>
+                      <th scope="col">
+                         <div>{keyValue.FileExtension}</div>
+                      </th>
+                   </tr>
+                </template>
+             </tbody>
+          </table>
+       </template>
+       </div>
+    </lightning-card>
+ </template>

@@ -1,0 +1,35 @@
+<template>
+
+    <div >
+
+        <p>Displaying Account Information</p>
+
+        <template if:true={accountRecord}>
+
+            <template for:each={accountRecord} for:item="item" for:index="index">
+
+                <p key={item.Id}>
+
+                   Name: {item.Name}
+
+                   <br/>
+
+                    Industry: {item.Industry}
+
+                </p>
+
+            </template>
+
+        </template>
+
+        <template if:true={error}>
+
+            Some error occured.
+
+        </template>
+
+    </div>
+
+ 
+
+</template>
